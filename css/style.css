@@ -1,0 +1,8 @@
+#success_message{ display: none;}
+.col-md-4 {
+    width: 100%;
+}
+.form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: -webkit-center;}
