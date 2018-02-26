@@ -144,7 +144,7 @@ h5,
 h6 {
   font-family: 'Open Sans', 'Lato', Arial, sans-serif;
 }
-.bg-tongquan: { background-color: #ffffff}
+.bg-tongquan: { background-color: #ffffff !important}
 .bg-primary {
   background-color: #ffffff !important;}
 .bg-fuc {
