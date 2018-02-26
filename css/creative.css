@@ -15,7 +15,9 @@ footer {
     line-height: 1.33;
 
 }
-
+.button{ margin:auto;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;}
 .btn-circle {
     width: 30px;
     height: 30px;
@@ -25,6 +27,7 @@ footer {
     font-size: 12px;
     line-height: 1.42857;
 color: #20a286
+
 }
 .form-upload-cv {
     margin: auto;
