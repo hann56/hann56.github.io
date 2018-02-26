@@ -6,7 +6,26 @@ html {
 footer {
   background-color: white
 }
+.btn-circle.btn-xl {
+    width: 60px;
+    height: 60px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
 
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+color: #20a286
+}
 .form-upload-cv {
     margin: auto;
     float: none !important;
@@ -404,7 +423,7 @@ header.masthead p {
 }
 
 .btn-xl {
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 .btn-primary {
