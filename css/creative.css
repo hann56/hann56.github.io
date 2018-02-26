@@ -144,9 +144,9 @@ h5,
 h6 {
   font-family: 'Open Sans', 'Lato', Arial, sans-serif;
 }
-.bg-tongquan: { background-color: #f5f5f5}
+.bg-tongquan: { background-color: #ffffff}
 .bg-primary {
-  background-color: #eaeaea !important;}
+  background-color: #ffffff !important;}
 .bg-fuc {
   background-image: url("../img/header.jpg");
   background-position: center center;
@@ -155,7 +155,7 @@ h6 {
   -o-background-size: cover;
   background-size: cover;}
 .bg-dark {
-  background-color: #eaeaea !important;
+  background-color: #ffffff !important;
 }
 
 .text-faded {
