@@ -147,7 +147,7 @@ body {
 	display: inline-block;
 }
 hr {
-  max-width: 400px;
+  max-width: 200px;
   border-width: 3px;
   border-color: #20a286;
 }
@@ -177,7 +177,9 @@ h6 {
   font-family: 'Open Sans', 'Lato', Arial, sans-serif;
 }
 .bg-primary {
-  background-color: #ffffff !important;}
+  background-color: #eaeaea !important;}
+  .bg-xam {
+    background-color: #eaeaea !important;}
 .bg-fuc {
   background-image: url("http://nhvl.hrc.com.vn/img/portfolio/fc.jpg");
   background-position: center center;
