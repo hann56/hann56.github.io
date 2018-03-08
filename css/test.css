@@ -10,3 +10,22 @@
 .navbar-inverse .navbar-toggle .icon-bar {
     background-color: #000;
 }
+
+.thumb {
+    display: inline-block;
+    width: 30%;
+}
+
+.caption {
+    display: inline-block;
+    width: 60%;
+}
+
+.media-body {
+    width: 66%;
+}
+
+.me {
+    /* margin-top: 20px; */
+    padding: 2%;
+}
