@@ -345,12 +345,13 @@
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
                         <br/><br/><br/><br/><br/><br/><br/><br/>
-                        <!-- <p class="text-center"><b>Để lại email và xem kết quả</b></p> -->
-                        <form action="http://uvtn.hrc.com.vn/job-selection-test" id="emailRegister">
-                           <!-- <div class="form-group text-center">
+                        <p class="text-center"><b>Để lại email và xem kết quả</b></p>
+                        <form action="" id="emailRegister" accept-charset="utf-8">
+                           <div class="form-group text-center">
                               <input type="email" name="email" class="testedemail subscribe" required
                                  placeholder="Email"/>
-                           </div> -->
+                              <input type="hidden" name="list" value="9gzQBxNqGnyVuePhk9Ih0A"/>
+                           </div>
                            <div class="text-center">
                               <a role="button" class="btn btn-default btn-join view-test-result-btn">XEM KẾT QUẢ</a>
                            </div>
@@ -359,7 +360,7 @@
                      </div>
                   </div>
                </div>
-               <!-- <div class="slide test-result hide">
+               <div class="slide test-result hide">
                   <div class="row">
                      <div class="col-sm-7">
                         <div class="human-type">
@@ -383,7 +384,7 @@
                         </div>
                      </div>
                   </div>
-               </div> -->
+               </div>
             </div>
          </div>
       </div>
@@ -750,26 +751,26 @@
                  var $btn = $(this);
                  var result = getTestResult();
                  $btn.button('loading');
-                 location.href = 'test-result/' + result + '.html';
-                //  location.href = 'http://google.com.vn/' + result;
-                //  $.ajax({
-                //             type: 'POST',
-                //             url: './submit3',
-                //             data: {
-                //                 result: JSON.stringify(getTestResult())
-                //             },
-                //             success: function () {
-                //                 $btn.button('reset');
-                //                 var result = getTestResult();
-                //                 // location.href = "https://hrc.com.vn";
-                //                 location.href = 'http://uvtn.hrc.com.vn/job-selection-test/' + result.type + '/' + result.suggest;
-                //             },
-                //             error: function () {
-                //                 $btn.button('reset');
-                //                 // location.href = 'https://google.com.vn';
-                //                 alert('Có sự cố xảy ra, vui lòng thử lại');
-                //             }
-                //         });
+                //  location.href = 'test-result/' + result + '.html';
+                 $.ajax({
+                            type: 'POST',
+                            url: 'http://sendi.hrc.com.vn/subscribe',
+                            data: {
+                                email: $('.testedemail').val(),
+                                list: "9gzQBxNqGnyVuePhk9Ih0A"
+                            },
+                            success: function () {
+                                $btn.button('reset');
+                                var result = getTestResult();
+                                location.href = 'test-result/' + result + '.html';
+                            },
+                            error: function () {
+                                $btn.button('reset');
+                                $('.test-result').show();
+                                // location.href = 'test-result/' + result + '.html';
+                                // alert('Có sự cố xảy ra, vui lòng thử lại');
+                            }
+                        });
              });
          });
       </script>
