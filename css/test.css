@@ -6,3 +6,7 @@
 .navbar-inverse .navbar-nav>li>a {
     color: #343c45;
 }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
