@@ -341,16 +341,16 @@
                      <button class="btn btn-default" onclick="startTest();">BẮT ĐẦU LẠI</button>
                   </p>
                </div>
-               <div class="slide test-end-confirm hide">
+               <div class="slide test-end-confirm test-end-confirm-1 hide">
                   <div class="row">
                      <div class="col-md-12 col-xs-12">
                         <br/><br/><br/><br/><br/><br/><br/><br/>
                         <p class="text-center"><b>Để lại email và xem kết quả</b></p>
-                        <form action="" id="emailRegister" accept-charset="utf-8">
+                        <form action="http://sendi.hrc.com.vn/subscribe" method="POST" id="emailRegister" accept-charset="utf-8">
                            <div class="form-group text-center">
                               <input type="email" name="email" class="testedemail subscribe" required
                                  placeholder="Email"/>
-                              <input type="hidden" name="list" value="9gzQBxNqGnyVuePhk9Ih0A"/>
+                              <input type="hidden" name="list" value="UmowlbvdxSPMeLDiFTig1g"/>
                            </div>
                            <div class="text-center">
                               <a role="button" class="btn btn-default btn-join view-test-result-btn">XEM KẾT QUẢ</a>
@@ -360,6 +360,63 @@
                      </div>
                   </div>
                </div>
+               <div class="slide test-end-confirm test-end-confirm-2 hide">
+                    <div class="row">
+                       <div class="col-md-12 col-xs-12">
+                          <br/><br/><br/><br/><br/><br/><br/><br/>
+                          <p class="text-center"><b>Để lại email và xem kết quả</b></p>
+                          <form action="http://sendi.hrc.com.vn/subscribe" method="POST" id="emailRegister" accept-charset="utf-8">
+                             <div class="form-group text-center">
+                                <input type="email" name="email" class="testedemail subscribe" required
+                                   placeholder="Email"/>
+                                <input type="hidden" name="list" value="MplyhI763C47jz9WAEKlS5HQ"/>
+                             </div>
+                             <div class="text-center">
+                                <a role="button" class="btn btn-default btn-join view-test-result-btn">XEM KẾT QUẢ</a>
+                             </div>
+                          </form>
+                          <br/><br/><br/><br/><br/><br/><br/><br/>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="slide test-end-confirm test-end-confirm-3 hide">
+                        <div class="row">
+                           <div class="col-md-12 col-xs-12">
+                              <br/><br/><br/><br/><br/><br/><br/><br/>
+                              <p class="text-center"><b>Để lại email và xem kết quả</b></p>
+                              <form action="http://sendi.hrc.com.vn/subscribe" method="POST" id="emailRegister" accept-charset="utf-8">
+                                 <div class="form-group text-center">
+                                    <input type="email" name="email" class="testedemail subscribe" required
+                                       placeholder="Email"/>
+                                    <input type="hidden" name="list" value="kPHDzK7xLRcIGFoejPRbyg"/>
+                                 </div>
+                                 <div class="text-center">
+                                    <a role="button" class="btn btn-default btn-join view-test-result-btn">XEM KẾT QUẢ</a>
+                                 </div>
+                              </form>
+                              <br/><br/><br/><br/><br/><br/><br/><br/>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="slide test-end-confirm test-end-confirm-4 hide">
+                            <div class="row">
+                               <div class="col-md-12 col-xs-12">
+                                  <br/><br/><br/><br/><br/><br/><br/><br/>
+                                  <p class="text-center"><b>Để lại email và xem kết quả</b></p>
+                                  <form action="http://sendi.hrc.com.vn/subscribe" method="POST" id="emailRegister" accept-charset="utf-8">
+                                     <div class="form-group text-center">
+                                        <input type="email" name="email" class="testedemail subscribe" required
+                                           placeholder="Email"/>
+                                        <input type="hidden" name="list" value="aH7HhtWZwyHMKSjdpqkq9A"/>
+                                     </div>
+                                     <div class="text-center">
+                                        <a role="button" class="btn btn-default btn-join view-test-result-btn">XEM KẾT QUẢ</a>
+                                     </div>
+                                  </form>
+                                  <br/><br/><br/><br/><br/><br/><br/><br/>
+                               </div>
+                            </div>
+                         </div>
                <div class="slide test-result hide">
                   <div class="row">
                      <div class="col-sm-7">
@@ -552,14 +609,23 @@
               element.appendTo('.suggest').show();
               });*/
          
-             $('.test-end-confirm').addClass('hide');
+            //  $('.test-end-confirm').addClass('hide');
+             $('.test-end-confirm-1').addClass('hide');
+             $('.test-end-confirm-2').addClass('hide');
+             $('.test-end-confirm-3').addClass('hide');
+             $('.test-end-confirm-4').addClass('hide');
              $('.test-result').removeClass('hide');
              $('.share-result').attr('data-share', result.share);
          }
          
          function endTestConfirm() {
              $('.test-questions').addClass('hide');
-             $('.test-end-confirm').removeClass('hide');
+             alert(getTestResult());
+             if (getTestResult() == 'group-1') {$('.test-end-confirm-1').removeClass('hide');}
+             else if (getTestResult() == 'group-2') {$('.test-end-confirm-2').removeClass('hide');}
+             else if (getTestResult() == 'group-3') {$('.test-end-confirm-3').removeClass('hide');}
+             else if (getTestResult() == 'group-4') {$('.test-end-confirm-4').removeClass('hide');}
+            //  $('.test-end-confirm').removeClass('hide');
          }
          
          function goToQuestion(index) {
@@ -751,26 +817,35 @@
                  var $btn = $(this);
                  var result = getTestResult();
                  $btn.button('loading');
+                //  $.post('http://sendi.hrc.com.vn/subscribe', {
+                //     headers : {Accept : "application/json","Access-Control-Allow-Origin" : "*"},
+                //     email: $('.testedemail').val(),
+                //     list: "9gzQBxNqGnyVuePhk9Ih0A"
+                //  });
                 //  location.href = 'test-result/' + result + '.html';
-                 $.ajax({
-                            type: 'POST',
-                            url: 'http://sendi.hrc.com.vn/subscribe',
-                            data: {
-                                email: $('.testedemail').val(),
-                                list: "9gzQBxNqGnyVuePhk9Ih0A"
-                            },
-                            success: function () {
-                                $btn.button('reset');
-                                var result = getTestResult();
-                                location.href = 'test-result/' + result + '.html';
-                            },
-                            error: function () {
-                                $btn.button('reset');
-                                $('.test-result').show();
-                                // location.href = 'test-result/' + result + '.html';
-                                // alert('Có sự cố xảy ra, vui lòng thử lại');
-                            }
-                        });
+                //  $.ajax({
+                //             type: 'POST',
+                //             url: 'http://sendi.hrc.com.vn/subscribe',
+                //             headers : {"Access-Control-Allow-Origin" : "*"},
+                //             data: {
+                //                 origin: "Fuck you",
+                //                 email: $('.testedemail').val(),
+                //                 list: "9gzQBxNqGnyVuePhk9Ih0A"
+                //             },
+                //             success: function () {
+                //                 $btn.button('reset');
+                //                 console.log('Succeed!!!');
+                //                 var result = getTestResult();
+                //                 location.href = 'test-result/' + result + '.html';
+                //             },
+                //             error: function () {
+                //                 $btn.button('reset');
+                //                 console.log("Erorr");
+                //                 $('.test-result').show();
+                //                 // location.href = 'test-result/' + result + '.html';
+                //                 alert('Có sự cố xảy ra, vui lòng thử lại');
+                //             }
+                //         });
              });
          });
       </script>
