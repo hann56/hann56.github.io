@@ -517,14 +517,14 @@
 					</div>
 					<div class="col-md-5 col-xs-12 reg-form">
 						<div class="form-upload-cv" style="margin-top: 10px;">
-							<form id="personalForm" method="POST" action="http://form.hrc.com.vn/submit2">
+							<form id="personalForm" method="POST" action="http://sendi.hrc.com.vn/subscribe">
 								<input type="hidden" name="_token" value="jpfl3nKf5kfLUO733louK2QAkY0W7eyXL2dKnrtw">
 								<div style="width: 100%">
 									<div class="form-group append-error">
-										<input class="form-control" id="fullname" placeholder="Họ và tên" required="required" name="fullname" type="text">
+										<input class="form-control" id="name" placeholder="Họ và tên" required="required" name="name" type="text">
 									</div>
 									<div class="form-group append-error">
-										<input class="form-control" id="ngaysinh" placeholder="Ngày sinh" name="dob">
+										<input class="form-control" id="date" placeholder="Ngày sinh" name="date">
 									</div>
 									<div class="form-group append-error">
 										<input class="form-control" id="email" placeholder="Email" required="required" name="email" type="email">
@@ -533,7 +533,7 @@
 										<input class="form-control" id="phone_number" placeholder="Số điện thoại" required="required" name="phone" type="number">
 									</div>
 									<div class="form-group append-error">
-										<select class="form-control" required="required" name="university">
+										<select class="form-control" required="required" name="uni">
 											<option selected="selected" value="">Trường đại học</option>
 											<option value="1">ĐH Ngoại Thương</option>
 											<option value="2">ĐH Kinh tế Quốc dân</option>
@@ -557,7 +557,7 @@
 										</select>
 									</div>
 									<div class="form-group append-error">
-										<select class="form-control" name="graduated_year">
+										<select class="form-control" name="totnghiep">
 											<option selected="selected" value="">Năm tốt nghiệp</option>
 											<option value="1">2010</option>
 											<option value="1">2011</option>
@@ -574,10 +574,10 @@
 										</select>
 									</div>
 									<div class="form-group append-error">
-										<textarea class="form-control" id="nganhhoc" placeholder="Ngành học của bạn" required="required" rows="3" name="major" cols="50"></textarea>
+										<textarea class="form-control" id="nganh" placeholder="Ngành học của bạn" required="required" rows="3" name="major" cols="50"></textarea>
                   </div>
                   <div class="form-group append-error">
-										<select class="form-control" required="required" name="industry">
+										<select class="form-control" required="required" name="linhvuc">
 											<option selected="selected" value="">Lĩnh vực quan tâm</option>
 											<option value="1">Bảo hiểm</option>
 											<option value="2">Bất động sản</option>
